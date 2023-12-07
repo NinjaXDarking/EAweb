@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Data table -->
+   <link
+   href="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-1.13.7/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/datatables.min.css"
+   rel="stylesheet">
+ <!-- boostrap -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <!--font-awesome  -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+   integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="./styles/styles2.css">
+    <title>Document</title>
+</head>
+<body>
+  <br>
+    <ul class="nav nav-tabs container justify-content-center" id="myTab" role="tablist">
+        <!-- <li class="nav-item" role="presentation">
+          <button  class="nav-link " id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true" onclick="redirigirLibro()" >Libros</button>
+        </li> -->
+        <li class="nav-item" role="presentation">
+          <button  class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false" >Prestamos</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false" onclick="redirigirUsuario()" >Usuarios</button>
+        </li>
+      </ul>
+      <br>
+      <!-- Libros -->
+      <div class="tab-content container" id="myTabContent">
+        <div class="tab-pane fade " id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+           
+        </div>
+        <!-- Prestamos -->
+        <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="container">
+                <div class="row justify-content-center ">
+                  <div class="col-md-8">
+                    <form class="row g-3 needs-validation" id="prestamos" novalidate >
+                      <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">ID</label>
+                        <input type="text" class="form-control" id="validationCustom01" required>
+                        <div class="valid-feedback">
+                          ¡Se ve bien!
+                        </div>
+                        <div class="invalid-feedback">
+                          Olvido este campo
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="validationCustom02" class="form-label">IdLibro</label>
+                        <input type="text" class="form-control" id="validationCustom02" required>
+                        <div class="valid-feedback">
+                          ¡Se ve bien!
+                        </div>
+                        <div class="invalid-feedback">
+                          Olvido este campo
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="validationCustomUsername" class="form-label">IdUsuario</label>
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="inputGroupPrepend">@</span>
+                          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+                            required>
+                            <div class="valid-feedback">
+                              ¡Se ve bien!
+                            </div>
+                          <div class="invalid-feedback">
+                            Olvido este campo
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="validationCustom03" class="form-label">FechaPrestamo</label>
+                        <input type="text" class="form-control" id="validationCustom03" required>
+                        <div class="valid-feedback">
+                          ¡Se ve bien!
+                        </div>
+                        <div class="invalid-feedback">
+                          Olvido este campo
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="validationCustom04" class="form-label">FechaDevolucion</label>
+                        <input type="text" class="form-control" id="validationCustom04" required>
+                        <div class="valid-feedback">
+                          ¡Se ve bien!
+                        </div>
+                        <div class="invalid-feedback">
+                          Olvido este campo
+                        </div>
+                      </div>
+                    
+                      
+                      <!-- <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                          <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                          </label>
+                          <div class="invalid-feedback">
+                            You must agree before submitting.
+                          </div>
+                        </div>
+                      </div> -->
+                      <div class="col-12 ">
+                        <button class="btn btn-primary" type="submit" id="btnInsertar">Insertar</button>
+                        <button class="btn btn-warning" type="submit" id="btnActualizar">Actualizar</button>
+                        <button class="btn btn-info" type="submit" id="btnLimpiar">Limpiar</button>
+                        <button class="btn btn-danger" type="submit" id="btnBorrar">Borrar</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+           
+              <div class="container my-5">
+                <div class="row">
+                  <table id="example" class="table table-striped" style="width: 100%">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Id</th>
+                        <th>IdLibro</th>
+                        <th>IdUsuario</th>
+                        <th>FechaPrestamo</th>
+                        <th>FechaDevolucion</th>
+                        <!-- <th>Opciones</th> -->
+                      </tr>
+                    </thead>
+                    <tbody id="table_prestamo"></tbody>
+                  </table>
+                </div>
+              </div>
+        </div>
+        <!-- Usuarios -->
+        <div class="tab-pane fade " id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+          
+        </div>
+
+   
+        </div>
+        <script>
+            function redirigirLibro() {
+                // Redirigir a la página deseada al hacer clic en el botón
+                window.location.href = "./libros.html";
+            }
+            function redirigirUsuario() {
+                // Redirigir a la página deseada al hacer clic en el botón
+                window.location.href = "./usuarios.html";
+            }
+         
+        </script>
+
+    <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- DataTable -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script
+  src="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-1.13.7/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/datatables.min.js"></script>
+<!-- Boostrap -->
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- datatables extension SELECT-->
+<script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+<!-- SWEET -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+
+<script src="./scr/prestamos.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+.col-12 {
+    flex: auto;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #000;
+    background-color: #61db9d40;
+    border-color: #198754 #0dcaf0 #e9ecef;
+}
+.nav-tabs {
+    border-bottom: 1px solid #198754;
+}
